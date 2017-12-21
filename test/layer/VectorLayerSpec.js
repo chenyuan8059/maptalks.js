@@ -1,4 +1,4 @@
-describe('VectorLayer', function () {
+describe('VectorLayer.Spec', function () {
 
     var container;
     var map;
@@ -217,6 +217,7 @@ describe('VectorLayer', function () {
                     scaleFn.call(this, x, y);
                 };
                 layer.once('layerload', function () {
+                    maptalks.Browser.retina = false;
                     expect(sx).to.be.eql(2);
                     expect(sy).to.be.eql(2);
                     done();
